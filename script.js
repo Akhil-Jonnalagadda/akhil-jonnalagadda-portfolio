@@ -1,4 +1,9 @@
 
+// Initialize EmailJS
+(function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+})();
+
 // DOM Elements
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
@@ -8,6 +13,7 @@ const projectCards = document.querySelectorAll('.project-card');
 const downloadResumeBtn = document.getElementById('downloadResume');
 const toast = document.getElementById('toast');
 const toastClose = document.querySelector('.toast-close');
+const expertiseToggle = document.getElementById('expertiseToggle');
 
 // Initialize Lucide icons
 document.addEventListener('DOMContentLoaded', function() {
@@ -35,6 +41,42 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
     }
+});
+
+// Expertise Level Toggle
+let expertiseLevelVisible = false;
+
+expertiseToggle.addEventListener('click', function() {
+    expertiseLevelVisible = !expertiseLevelVisible;
+    const skillLevelBars = document.querySelectorAll('.skill-level-bar');
+    
+    if (expertiseLevelVisible) {
+        skillLevelBars.forEach(bar => {
+            bar.classList.add('show');
+        });
+        this.innerHTML = '<i data-lucide="trending-down"></i> Hide Expertise Level';
+    } else {
+        skillLevelBars.forEach(bar => {
+            bar.classList.remove('show');
+        });
+        this.innerHTML = '<i data-lucide="trending-up"></i> Show Expertise Level';
+    }
+    
+    // Reinitialize icons after changing button content
+    lucide.createIcons();
+});
+
+// Skill item click handlers for detailed view
+document.querySelectorAll('.skill-icon-item').forEach(item => {
+    item.addEventListener('click', function() {
+        const skillName = this.dataset.skill;
+        const skillLevel = this.dataset.level;
+        
+        showToast({
+            title: `${skillName} Expertise`,
+            description: `Proficiency Level: ${skillLevel}%`
+        });
+    });
 });
 
 // Smooth scrolling for navigation links
@@ -79,7 +121,7 @@ projectFilters.forEach(filter => {
     });
 });
 
-// Contact Form Handling
+// Enhanced Contact Form Handling with EmailJS
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -98,30 +140,53 @@ contactForm.addEventListener('submit', function(e) {
         return;
     }
     
-    // Simulate form submission
+    // Show loading state
     const submitBtn = this.querySelector('.submit-btn');
     const btnText = submitBtn.querySelector('.btn-text');
     const originalText = btnText.textContent;
     
-    // Show loading state
     submitBtn.disabled = true;
     btnText.textContent = 'Sending...';
     
-    // Simulate API call
-    setTimeout(() => {
-        // Reset form
-        this.reset();
-        clearErrors();
-        
-        // Reset button
-        submitBtn.disabled = false;
-        btnText.textContent = originalText;
-        
-        // Show success message
-        showToast(getSuccessMessage(data.type));
-        
-        console.log('Contact Form Submission:', data);
-    }, 2000);
+    // Send email using EmailJS
+    const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        contact_type: data.type,
+        subject: data.subject,
+        message: data.message,
+        to_email: 'akhiljonnalagadda851@gmail.com' // Your email
+    };
+    
+    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS configuration
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+            console.log('Email sent successfully!', response.status, response.text);
+            
+            // Reset form
+            contactForm.reset();
+            clearErrors();
+            
+            // Reset button
+            submitBtn.disabled = false;
+            btnText.textContent = originalText;
+            
+            // Show success message
+            showToast(getSuccessMessage(data.type));
+            
+        }, function(error) {
+            console.error('Email send failed:', error);
+            
+            // Reset button
+            submitBtn.disabled = false;
+            btnText.textContent = originalText;
+            
+            // Show error message
+            showToast({
+                title: "Error",
+                description: "Failed to send message. Please try emailing me directly at akhiljonnalagadda851@gmail.com"
+            });
+        });
 });
 
 // Form Validation
@@ -252,34 +317,15 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.skill-card, .project-card, .experience-card, .education-card');
+    const animateElements = document.querySelectorAll('.skill-category-card, .project-card, .experience-card, .education-card');
     animateElements.forEach(el => observer.observe(el));
 });
 
-// Mobile menu handling (if needed)
+// Mobile menu handling
 function toggleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('mobile-open');
 }
-
-// Add mobile menu styles if needed
-const style = document.createElement('style');
-style.textContent = `
-    @media (max-width: 768px) {
-        .nav-links.mobile-open {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: var(--nav-bg);
-            padding: 1rem;
-            border-top: 1px solid var(--border-color);
-        }
-    }
-`;
-document.head.appendChild(style);
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -290,4 +336,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add any additional initialization here
     console.log('Portfolio loaded successfully!');
+    
+    // Show initial toast with instructions for EmailJS setup
+    setTimeout(() => {
+        showToast({
+            title: "Setup Required",
+            description: "Please configure EmailJS service keys in script.js to enable contact form functionality."
+        });
+    }, 2000);
 });
+/* education */
+
+/* the top letter aj  clickable */
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const logo = document.getElementById('scrollToTop');
+    if (logo) {
+      logo.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
