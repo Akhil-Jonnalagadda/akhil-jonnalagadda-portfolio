@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Download, Mail, Github, Linkedin, ExternalLink, Sun, Moon, Code, Database, Cloud, Globe } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import ContactForm from '@/components/ContactForm';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -72,14 +72,6 @@ const Index = () => {
   ];
 
   const filteredProjects = activeFilter === 'all' ? projects : projects.filter(project => project.category === activeFilter);
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-  };
 
   const handleDownloadResume = () => {
     toast({
@@ -432,21 +424,18 @@ const Index = () => {
                   </a>
                 </div>
               </div>
+              
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Response Time</h4>
+                <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                  <li>• Recruiters: Within 24 hours</li>
+                  <li>• Collaboration: Within 48 hours</li>
+                  <li>• General inquiries: Within 72 hours</li>
+                </ul>
+              </div>
             </div>
             
-            <Card>
-              <CardHeader>
-                <CardTitle>Send a Message</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleContactSubmit} className="space-y-4">
-                  <Input placeholder="Your Name" required />
-                  <Input type="email" placeholder="Your Email" required />
-                  <Textarea placeholder="Your Message" rows={4} required />
-                  <Button type="submit" className="w-full">Send Message</Button>
-                </form>
-              </CardContent>
-            </Card>
+            <ContactForm />
           </div>
         </div>
       </section>
