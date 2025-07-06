@@ -1059,6 +1059,7 @@ input:checked + .slider:before {
         border-top: 1px solid var(--border-color);
     }
 }
+<<<<<<< HEAD
 /*MAKING THE BOX SIZE EQUALLY */
 /* Equal sizing for skill boxes */
 .skill-icon-item {
@@ -1180,3 +1181,5 @@ input:checked + .slider:before {
     font-size: 1rem;
   }
 }
+=======
+>>>>>>> 35e8cdb6b1d01769e825e4ca8e066a4801e43ef3
