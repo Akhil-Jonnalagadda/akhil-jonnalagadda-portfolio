@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Dark Mode Toggle
 darkModeToggle.addEventListener('change', function() {
-    if (this.checked) {
+    if (!this.checked) {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
         localStorage.setItem('darkMode', 'enabled');
