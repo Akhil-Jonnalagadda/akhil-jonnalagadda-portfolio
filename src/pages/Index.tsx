@@ -115,7 +115,7 @@ const Index = () => {
                   Akhil Jonnalagadda
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4">
-                  Full Stack Developer | Cloud Enthusiast | Problem Solver
+                  Full Stack Developer
                 </p>
                 <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-8 italic">
                   "Turning ideas into interactive, scalable, and secure digital experiences."
@@ -423,15 +423,6 @@ const Index = () => {
                     <Github className="w-6 h-6" />
                   </a>
                 </div>
-              </div>
-              
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Response Time</h4>
-                <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                  <li>• Recruiters: Within 24 hours</li>
-                  <li>• Collaboration: Within 48 hours</li>
-                  <li>• General inquiries: Within 72 hours</li>
-                </ul>
               </div>
             </div>
             
