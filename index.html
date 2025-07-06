@@ -1,46 +1,454 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akhil Jonnalagadda - Full Stack Developer | Cloud Enthusiast | Portfolio</title>
-    <meta name="description" content="Full Stack Developer with expertise in React, Node.js, Python, Java, and Google Cloud Platform. Experienced in building scalable web applications and cloud-deployable solutions." />
-    <meta name="author" content="Akhil Jonnalagadda" />
-    <meta name="keywords" content="Full Stack Developer, React, Node.js, Python, Java, GCP, Cloud Computing, Web Development, Software Engineer" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhil Jonnalagadda - Full Stack Developer | Portfolio</title>
+    <meta name="description" content="Full Stack Developer with expertise in React, Node.js, Python, Java, and Google Cloud Platform. Experienced in building scalable web applications and cloud-deployable solutions.">
+    <meta name="author" content="Akhil Jonnalagadda">
+    <meta name="keywords" content="Full Stack Developer, React, Node.js, Python, Java, GCP, Cloud Computing, Web Development, Software Engineer">
+    
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Akhil Jonnalagadda - Full Stack Developer Portfolio" />
-    <meta property="og:description" content="Full Stack Developer specializing in scalable web applications and cloud solutions using React, Node.js, and Google Cloud Platform." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://akhil-portfolio.lovable.app" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta property="og:title" content="Akhil Jonnalagadda - Full Stack Developer Portfolio">
+    <meta property="og:description" content="Full Stack Developer specializing in scalable web applications and cloud solutions using React, Node.js, and Google Cloud Platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://akhil-portfolio.lovable.app">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
     <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@akhiljonnalagadda" />
-    <meta name="twitter:title" content="Akhil Jonnalagadda - Full Stack Developer" />
-    <meta name="twitter:description" content="Full Stack Developer with expertise in modern web technologies and cloud platforms." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@akhiljonnalagadda">
+    <meta name="twitter:title" content="Akhil Jonnalagadda - Full Stack Developer">
+    <meta name="twitter:description" content="Full Stack Developer with expertise in modern web technologies and cloud platforms.">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
     <!-- Additional SEO -->
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
-    <!-- Smooth scrolling -->
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  </head>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">AJ</div>
+            <div class="nav-items">
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="theme-toggle">
+                    <i data-lucide="sun" class="theme-icon"></i>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <i data-lucide="moon" class="theme-icon"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-background"></div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Akhil Jonnalagadda</h1>
+                    <p class="hero-subtitle">Full Stack Developer</p>
+                    <p class="hero-tagline">"Turning ideas into interactive, scalable, and secure digital experiences."</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="downloadResume">
+                            <i data-lucide="download"></i>
+                            Download Resume
+                        </button>
+                        <a href="#contact" class="btn btn-outline">
+                            <i data-lucide="mail"></i>
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm a passionate Full Stack Developer with a Master's degree in Computer Science and strong experience building scalable web applications and backend systems. My focus is on developing secure, cloud-deployable solutions with a user-first approach.</p>
+                <p>With hands-on experience in GCP, Node.js, React, and PostgreSQL, I enjoy transforming complex problems into elegant solutions. I'm currently seeking opportunities to contribute to impactful projects in cloud or web ecosystems.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-title">Strong Foundation</div>
+                        <p class="highlight-desc">System design and API development</p>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-title">Cloud Experience</div>
+                        <p class="highlight-desc">GCP deployment and CI/CD</p>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-title">Always Learning</div>
+                        <p class="highlight-desc">Eager to learn and adapt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i data-lucide="code" class="skill-icon"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">Java</span>
+                        <span class="badge">SQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i data-lucide="globe" class="skill-icon"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="badge">React.js</span>
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">Tailwind CSS</span>
+                        <span class="badge">Bootstrap</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i data-lucide="database" class="skill-icon"></i>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="badge">Node.js</span>
+                        <span class="badge">Express.js</span>
+                        <span class="badge">Java (Spring Boot)</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i data-lucide="database" class="skill-icon"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="badge">PostgreSQL</span>
+                        <span class="badge">MongoDB</span>
+                        <span class="badge">MySQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i data-lucide="cloud" class="skill-icon"></i>
+                        <h3>Cloud/DevOps</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="badge">Google Cloud Platform</span>
+                        <span class="badge">Compute Engine</span>
+                        <span class="badge">BigQuery</span>
+                        <span class="badge">Cloud Run</span>
+                        <span class="badge">GitHub Actions</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i data-lucide="code" class="skill-icon"></i>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <span class="badge">Git</span>
+                        <span class="badge">Postman</span>
+                        <span class="badge">VS Code</span>
+                        <span class="badge">Eclipse</span>
+                        <span class="badge">PyCharm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Project Filter -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="full-stack">Full Stack</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="full-stack">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop" alt="SecureNote">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SecureNote – Encrypted Note Sharing App</h3>
+                        <p class="project-description">Built and deployed a secure MERN-based platform with self-destructing messages and email alerts. Configured CI/CD using GitHub + Vercel + GCP Cloud Run.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">MERN</span>
+                            <span class="tech-badge">Cloud Run</span>
+                            <span class="tech-badge">SendGrid</span>
+                            <span class="tech-badge">MongoDB Atlas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link primary">
+                                <i data-lucide="external-link"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop" alt="E-Commerce Store">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Store – Apricot</h3>
+                        <p class="project-description">Created product catalogs, shopping cart, authentication. Deployed on AWS EC2 with public access and comprehensive logging system.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link primary">
+                                <i data-lucide="external-link"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="full-stack">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop" alt="Smart Health Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Health Dashboard</h3>
+                        <p class="project-description">Real-time request/response dashboard for emergency alerts. Integrated web sockets and user authentication for seamless communication.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Socket.IO</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link primary">
+                                <i data-lucide="external-link"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop" alt="Real-Time Leaderboard System">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Real-Time Leaderboard System</h3>
+                        <p class="project-description">Tracked player scores with Redis sorted sets. Included dynamic leaderboard with top player highlights and real-time updates.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Redis</span>
+                            <span class="tech-badge">Express.js</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link primary">
+                                <i data-lucide="external-link"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="section-container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-content">
+                <div class="experience-card">
+                    <h3 class="experience-title">Phoenix Global, Hyderabad</h3>
+                    <p class="experience-role">Cloud Intern – Jan 2024 to Mar 2024</p>
+                    <ul class="experience-list">
+                        <li>Deployed e-commerce web application on AWS (IP: 13.233.164.183)</li>
+                        <li>Managed public IP setup, cloud hosting, and monitoring</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-card">
+                    <h3 class="experience-title">Academic Projects</h3>
+                    <p class="experience-role">University of Massachusetts Lowell</p>
+                    <p class="experience-desc">Multiple GCP and Node.js based applications with real-time and encrypted functionality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section">
+        <div class="section-container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <h3 class="education-title">Master of Science in Computer Science</h3>
+                <p class="education-school">University of Massachusetts Lowell</p>
+                <p class="education-details">2023 – 2025 | GPA: 3.8/4.0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:akhiljonnalagadda851@gmail.com">akhiljonnalagadda851@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+1 (774)-786-3206</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Lowell, MA, USA</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/akhiljonnalagadda3" class="social-link">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Akhil" class="social-link">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="contact-form-card">
+                        <div class="contact-form-header">
+                            <i data-lucide="mail"></i>
+                            <h3>Send a Message</h3>
+                        </div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="type">I'm reaching out as a:</label>
+                                <select id="type" name="type">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="recruiter">Recruiter/HR</option>
+                                    <option value="collaboration">Collaboration Opportunity</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" placeholder="Brief subject of your message" required>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, opportunity, or question..." required></textarea>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i data-lucide="send"></i>
+                                <span class="btn-text">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Akhil Jonnalagadda. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <div class="toast-title"></div>
+            <div class="toast-description"></div>
+        </div>
+        <button class="toast-close">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
