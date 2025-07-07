@@ -51,6 +51,7 @@
                     <a href="#about" class="nav-link">About</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#education" class="nav-link">Education</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
                 <div class="theme-toggle">
@@ -91,28 +92,46 @@
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="section-container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>I'm a passionate Full Stack Developer with a Master's degree in Computer Science and strong experience building scalable web applications and backend systems. My focus is on developing secure, cloud-deployable solutions with a user-first approach.</p>
-                <p>With hands-on experience in GCP, Node.js, React, and PostgreSQL, I enjoy transforming complex problems into elegant solutions. I'm currently seeking opportunities to contribute to impactful projects in cloud or web ecosystems.</p>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <div class="highlight-title">Strong Foundation</div>
-                        <p class="highlight-desc">System design and API development</p>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-title">Cloud Experience</div>
-                        <p class="highlight-desc">GCP deployment and CI/CD</p>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-title">Always Learning</div>
-                        <p class="highlight-desc">Eager to learn and adapt</p>
-                    </div>
-                </div>
-            </div>
+  <div class="section-container">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-wrapper">
+      <!-- Left Side: Profile Image -->
+      <div class="about-image">
+        <img src="./public/projectimage/AKHIL-IMAGE.jpg" alt="Akhil Jonnalagadda Profile Photo" />
+      </div>
+
+      <!-- Right Side: Text and Highlights -->
+      <div class="about-content">
+        <p>
+          Hello! I'm <strong>Akhil Jonnalagadda</strong>, a passionate Full Stack Developer with a Master's degree in Computer Science. I specialize in crafting modern, scalable web applications and backend systems with a strong focus on security, cloud deployment, and user experience.
+        </p>
+        <p>
+          With hands-on experience in <strong>Google Cloud Platform (GCP)</strong>, <strong>Node.js</strong>, <strong>React</strong>, and <strong>PostgreSQL</strong>, I thrive on transforming complex problems into clean and elegant code. I'm driven by curiosity, continuous learning, and the impact technology can create.
+        </p>
+        <p>
+          I'm currently seeking exciting opportunities to contribute to innovative projects that create value in the cloud or web development ecosystem.
+        </p>
+
+        <!-- Highlight Section -->
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-title">🔧 <strong>System Design</strong></div>
+            <p class="highlight-desc">Robust API architecture & backend logic</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-title">☁️ <strong>Cloud Enthusiast</strong></div>
+            <p class="highlight-desc">Skilled in GCP services & CI/CD pipelines</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-title">🚀 <strong>Growth Mindset</strong></div>
+            <p class="highlight-desc">Always learning and evolving with tech</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
@@ -314,7 +333,7 @@
                     </div>
                     <div class="skills-icons-grid">
                         <div class="skill-icon-item" data-skill="Google Cloud Platform" data-level="85">
-                            <img src="i" alt="Google Cloud Platform">
+                            <img src="./public/icons/google-cloud.svg" alt="Google Cloud Platform">
                             <span>Google Cloud Platform</span>
                             <div class="skill-level-bar">
                                 <div class="skill-level-fill" style="width: 85%"></div>
@@ -529,27 +548,24 @@
 
                 <div class="project-card" data-category="backend">
                     <div class="project-image">
-                        <img src="./public/projectimage/emotions.png" alt="E-Commerce Store">
+                        <img src="./public/projectimage/emotion detection.png" alt="E-Commerce Store">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Emotions-Detection</h3>
                         <p class="project-description">This project is a Django-based web application for emotion detection using image processing and machine learning techniques. The system uses a webcam to capture real-time facial expressions and analyzes them to detect emotions. Based on the detected emotion, it plays a corresponding song.</p>
                         <div class="project-tech">
-                            <span class="tech-badge"><HTML:5></HTML:5></span> 
+                            <span class="tech-badge">HTML 5</span> 
                             <span class="tech-badge">CSS3</span>
                             <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">Python/span>
-                                <span class="tech-badge">Django/span>
+                            <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Django></span>
                         </div>
                         <div class="project-links">
                            <a href="https://github.com/Akhil-Jonnalagadda/Emotions-Detection" target="_blank" class="project-link">
                             <i data-lucide="github"></i>
                             Code
                             </a>
-                            <a href="#" class="project-link primary">
-                                <i data-lucide="external-link"></i>
-                                Demo
-                            </a>
+                           
                         </div>
                     </div>
                 </div>
@@ -576,10 +592,7 @@
                             Code
                             </a>
                             
-                            <a href="#" class="project-link primary">
-                                <i data-lucide="external-link"></i>
-                                Demo
-                            </a>
+                          
                         </div>
                     </div>
                 </div>
@@ -603,10 +616,7 @@
                             Code
                             </a>
                                                        
-                            <a href="#" class="project-link primary">
-                                <i data-lucide="external-link"></i>
-                                Demo
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -616,26 +626,28 @@
 
     <!-- Experience Section -->
    
+<!-- Education Section -->
+<section id="education" class="education-section">
+  <div class="section-container">
+    <h2 class="section-title">Education</h2>
+    <div class="education-timeline">
+      
+      <div class="education-item">
+         <h3 class="school">University of Massachusetts Lowell</h3>
+        <p class="edu-degree">Master of Science in Computer Science</p>
+        <p class="duration">2023 – 2025 | GPA: 3.8 / 4.0</p>
+      </div>
 
-    <!-- Education Section -->
-    <section class="education-section">
-        <div class="section-container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-card">
-                <h3 class="education-title">Master of Science in Computer Science</h3>
-                <p class="education-school">University of Massachusetts Lowell</p>
-                <p class="education-details">2023 – 2025 | GPA: 3.8/4.0</p>
-            </div>
-            <div>
-                 <div class="education-card">
-                <h3 class="education-title">Computer Science</h3>
-                <p class="education-school">Bharath Institute Of Higher Education And Research</p>
-                <p class="education-details">2019 – 2023 | GPA: 9.3/10</p>
-            </div>
-            </div>
-            
-        </div>
-    </section>
+      <div class="education-item">
+        <h3 class="school">Bharath Institute of Higher Education and Research</h3>
+        <p class="edu-degree">Bachelor of Technology in Computer Science</p>
+        <p class="duration">2019 – 2023 | GPA: 9.3 / 10</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -657,14 +669,15 @@
                             <span class="contact-icon">📍</span>
                             <span>Lowell, MA, USA</span>
                         </div>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/akhil85/" class="social-link">
-                                <i data-lucide="linkedin"></i>
-                            </a>
-                            <a href="https://github.com/Akhil-Jonnalagadda" class="social-link">
-                                <i data-lucide="github"></i>
-                            </a>
-                        </div>
+<div class="social-links">
+<a href="https://www.linkedin.com/in/akhil85/" class="social-link" target="_blank" rel="noopener">
+<i data-lucide="linkedin"></i>
+</a>
+<a href="https://github.com/Akhil-Jonnalagadda" class="social-link" target="_blank" rel="noopener">
+<i data-lucide="github"></i>
+</a>
+</div>
+
                     </div>
                 </div>
                 
@@ -737,6 +750,8 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
   document.addEventListener("DOMContentLoaded", function () {
     const scrollLogo = document.getElementById("scrollToTop");

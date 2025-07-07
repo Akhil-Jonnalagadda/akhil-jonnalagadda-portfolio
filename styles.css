@@ -1168,3 +1168,147 @@ input:checked + .slider:before {
     font-size: 1rem;
   }
 }
+/* image style */
+.about-section {
+  padding: 60px 20px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about-image img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  max-width: 700px;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.highlight-item {
+  flex: 1 1 220px;
+  max-width: 280px;
+}
+
+.highlight-title {
+  font-size: 1.1rem;
+  color: #57eaad;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+
+.section-title {
+  color: #939bff; /* Soft violet blue from image */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #38bdf8; /* Sky blue */
+  border: 2px solid #38bdf8;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.project-link:hover {
+  background-color: #38bdf8;
+  color: #0f172a; /* Darker text for contrast */
+}
+
+.project-link i {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* styling for education section */
+.education-section {
+  padding: 4rem 1rem;
+  background-color: var(--background);
+}
+
+.education-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-item {
+  background: #111827; /* dark background card */
+  border-left: 4px solid #38bdf8;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Degree style */
+.edu-degree {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #f1f5f9; /* visible on dark background by default */
+}
+
+/* Ensure visibility in light mode too */
+body.light-mode .edu-degree {
+  color: #f1f5f9 !important;  /* light text for dark card in light mode */
+}
+
+body.dark-mode .edu-degree {
+  color: #e2e8f0 !important; /* already light for dark mode */
+}
+
+.school {
+  font-size: 2rem;
+  color: #0dd3fa;
+  margin: 0.2rem 0 0.5rem;
+  margin-top: 40px;
+}
+
+.duration {
+  font-size: 0.95rem;
+  color: #60f59e;
+}

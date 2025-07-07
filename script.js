@@ -33,6 +33,7 @@ darkModeToggle.addEventListener('change', function() {
     }
 });
 
+
 // Load saved theme preference
 document.addEventListener('DOMContentLoaded', function() {
     const darkMode = localStorage.getItem('darkMode');
