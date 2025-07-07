@@ -1,5 +1,4 @@
 // ✅ script.js - Plain JS logic for dark mode, contact form, and mobile nav
-const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
 // DOMContentLoaded wrapper
 window.addEventListener('DOMContentLoaded', () => {
