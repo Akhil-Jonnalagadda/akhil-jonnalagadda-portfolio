@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   base: '/', // ✅ important for Vercel path resolution
 
   server: {
-    host: "::",
+    host: "localhost",
     port: 8080,
   },
 
