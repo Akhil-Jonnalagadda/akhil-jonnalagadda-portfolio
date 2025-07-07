@@ -83,6 +83,18 @@ window.addEventListener('DOMContentLoaded', () => {
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }
+
+  // Scroll to Top Logo
+  const scrollLogo = document.getElementById("scrollToTop");
+  if (scrollLogo) {
+    scrollLogo.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
 });
 document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
