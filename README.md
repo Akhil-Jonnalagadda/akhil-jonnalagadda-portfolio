@@ -1,73 +1,99 @@
-# Welcome to your Lovable project
+# 💼 Personal Portfolio Website
 
-## Project info
+A sleek, responsive, and modern portfolio website built by **Akhil Jonnalagadda** to showcase projects, skills, experience, and contact information.
 
-**URL**: https://lovable.dev/projects/eac8f104-81f2-45de-93de-41224279695c
+🌐 **Live Demo**: https://www.linkedin.com/in/akhil85/
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Tech Stack
 
-**Use Lovable**
+This project is built using the latest and most efficient tools in frontend development:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/eac8f104-81f2-45de-93de-41224279695c) and start prompting.
+* **React** – For building fast, component-based UIs
+* **TypeScript** – For type-safe JavaScript development
+* **Vite** – Lightning-fast build tool and dev server
+* **Tailwind CSS** – Utility-first CSS framework for styling
+* **shadcn/ui** – Beautifully designed accessible components
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📂 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+To run this project locally on your machine:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 1️⃣ Clone the Repository
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
 git clone <YOUR_GIT_URL>
+```
 
-# Step 2: Navigate to the project directory.
+### 2️⃣ Navigate to the Project Folder
+
+```bash
 cd <YOUR_PROJECT_NAME>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 3️⃣ Install Dependencies
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+```
+
+### 4️⃣ Start the Development Server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The project will be available at `https://www.linkedin.com/in/akhil85/` 
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## ✍️ How to Contribute or Customize
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+You can edit this project using:
 
-## What technologies are used for this project?
+* **Your Preferred IDE** (VS Code recommended)
+* **GitHub**:
 
-This project is built with:
+  * Navigate to a file
+  * Click the ✏️ "Edit" button
+  * Make your changes and commit
+* **GitHub Codespaces**:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+  * Open the repository
+  * Click **Code** → **Codespaces** → **New Codespace**
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/eac8f104-81f2-45de-93de-41224279695c) and click on Share -> Publish.
+## 🌐 Deployment
 
-## Can I connect a custom domain to my Lovable project?
+The project is deployed using [Vercel](https://vercel.com/), which supports instant previews and continuous deployment.
 
-Yes, you can!
+To deploy your own version:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Push your code to GitHub.
+2. Connect your repo to Vercel.
+3. Configure your domain or use the default `.vercel.app` domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## 🔗 Custom Domain Setup
+
+If you want to use a custom domain:
+
+1. Go to your Vercel project dashboard.
+2. Navigate to **Settings > Domains**.
+3. Add your custom domain and follow the DNS setup instructions.
+
+---
+
+## 👤 Author
+
+**Akhil Jonnalagadda*
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
