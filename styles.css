@@ -415,15 +415,15 @@ input:checked + .slider:before {
 
 .skills-icons-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.75rem;
 }
 
 .skill-icon-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 0.75rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 0.75rem;
     transition: all 0.3s ease;
@@ -431,6 +431,8 @@ input:checked + .slider:before {
     border: 1px solid transparent;
     position: relative;
     overflow: hidden;
+    min-height: 100px;
+    justify-content: center;
 }
 
 .skill-icon-item:hover {
@@ -440,11 +442,12 @@ input:checked + .slider:before {
 }
 
 .skill-icon-item img {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-bottom: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.4rem;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
     transition: all 0.3s ease;
+    object-fit: contain;
 }
 
 .skill-level-bar {
@@ -483,6 +486,113 @@ input:checked + .slider:before {
 @keyframes shimmer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
+}
+
+/* Certifications Section */
+.certifications-section {
+    padding: 4rem 1rem;
+    background-color: var(--bg-primary);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certification-placeholder {
+    background: var(--card-bg);
+    border: 2px dashed #3b82f6;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+}
+
+.certification-placeholder:hover {
+    border-color: #2563eb;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+}
+
+.cert-image-placeholder {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    border: 2px solid #8b5cf6;
+}
+
+.cert-placeholder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.cert-upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(59, 130, 246, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cert-image-placeholder:hover .cert-upload-overlay {
+    opacity: 1;
+}
+
+.upload-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cert-name-input,
+.cert-link-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #06d6a0;
+    border-radius: 0.5rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cert-name-input:focus,
+.cert-link-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+}
+
+.cert-name-input::placeholder,
+.cert-link-input::placeholder {
+    color: var(--text-muted);
 }
 
 /* Projects Section */
