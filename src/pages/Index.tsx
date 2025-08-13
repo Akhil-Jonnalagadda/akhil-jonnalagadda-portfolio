@@ -5,13 +5,15 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
-import { Download, Mail, Github, Linkedin, ExternalLink, Sun, Moon, Code, Database, Cloud, Globe } from 'lucide-react';
+import { Download, Mail, Github, Linkedin, ExternalLink, Sun, Moon, Code, Database, Cloud, Globe, Brain } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import ContactForm from '@/components/ContactForm';
+import EmotionDetector from '@/components/EmotionDetector';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
+  const [showEmotionDemo, setShowEmotionDemo] = useState(false);
   const { toast } = useToast();
 
   const toggleDarkMode = () => {
@@ -31,6 +33,17 @@ const Index = () => {
   const projects = [
     {
       id: 1,
+      title: 'AI Emotion Detection System',
+      description: 'Real-time emotion detection using computer vision and machine learning. Features live camera feed analysis, confidence scoring, and emotion history tracking with privacy-focused local processing.',
+      tech: ['React', 'TypeScript', 'Computer Vision', 'WebRTC', 'Machine Learning'],
+      category: 'ai',
+      github: '#',
+      demo: 'emotion-demo',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
+      hasDemo: true
+    },
+    {
+      id: 2,
       title: 'SecureNote – Encrypted Note Sharing App',
       description: 'Built and deployed a secure MERN-based platform with self-destructing messages and email alerts. Configured CI/CD using GitHub + Vercel + GCP Cloud Run.',
       tech: ['MERN', 'Cloud Run', 'SendGrid', 'MongoDB Atlas'],
@@ -40,7 +53,7 @@ const Index = () => {
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
     },
     {
-      id: 2,
+      id: 3,
       title: 'E-Commerce Store – Apricot',
       description: 'Created product catalogs, shopping cart, authentication. Deployed on AWS EC2 with public access and comprehensive logging system.',
       tech: ['Java', 'Spring Boot', 'PostgreSQL', 'AWS'],
@@ -50,7 +63,7 @@ const Index = () => {
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Smart Health Dashboard',
       description: 'Real-time request/response dashboard for emergency alerts. Integrated web sockets and user authentication for seamless communication.',
       tech: ['Node.js', 'Socket.IO', 'MongoDB'],
@@ -60,7 +73,7 @@ const Index = () => {
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Real-Time Leaderboard System',
       description: 'Tracked player scores with Redis sorted sets. Included dynamic leaderboard with top player highlights and real-time updates.',
       tech: ['Redis', 'Express.js', 'PostgreSQL'],
@@ -300,6 +313,14 @@ const Index = () => {
               >
                 Backend
               </Button>
+              <Button 
+                variant={activeFilter === 'ai' ? 'default' : 'outline'}
+                onClick={() => setActiveFilter('ai')}
+                size="sm"
+              >
+                <Brain className="w-4 h-4 mr-1" />
+                AI/ML
+              </Button>
             </div>
           </div>
 
@@ -330,12 +351,23 @@ const Index = () => {
                         Code
                       </a>
                     </Button>
-                    <Button size="sm" asChild>
-                      <a href={project.demo} className="flex items-center gap-1">
+                    {project.hasDemo ? (
+                      <Button 
+                        size="sm" 
+                        onClick={() => setShowEmotionDemo(true)}
+                        className="flex items-center gap-1"
+                      >
                         <ExternalLink className="w-4 h-4" />
-                        Demo
-                      </a>
-                    </Button>
+                        Live Demo
+                      </Button>
+                    ) : (
+                      <Button size="sm" asChild>
+                        <a href={project.demo} className="flex items-center gap-1">
+                          <ExternalLink className="w-4 h-4" />
+                          Demo
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -343,6 +375,41 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* AI Demo Modal */}
+      {showEmotionDemo && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  AI Emotion Detection - Live Demo
+                </h3>
+                <Button 
+                  variant="outline" 
+                  onClick={() => setShowEmotionDemo(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ×
+                </Button>
+              </div>
+              <EmotionDetector />
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+                  🎥 Demo Features:
+                </h4>
+                <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
+                  <li>• Real-time emotion detection from webcam feed</li>
+                  <li>• Machine learning confidence scoring</li>
+                  <li>• Privacy-focused: All processing happens locally</li>
+                  <li>• Emotion history tracking and visualization</li>
+                  <li>• Built with React, TypeScript, and Computer Vision APIs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Experience Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
