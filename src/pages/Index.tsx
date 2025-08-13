@@ -50,7 +50,8 @@ const Index = () => {
       category: 'full-stack',
       github: '#',
       demo: '#',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+      hasDemo: false
     },
     {
       id: 3,
@@ -60,7 +61,8 @@ const Index = () => {
       category: 'backend',
       github: '#',
       demo: '#',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop',
+      hasDemo: false
     },
     {
       id: 4,
@@ -70,7 +72,8 @@ const Index = () => {
       category: 'full-stack',
       github: '#',
       demo: '#',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop',
+      hasDemo: false
     },
     {
       id: 5,
@@ -80,11 +83,12 @@ const Index = () => {
       category: 'backend',
       github: '#',
       demo: '#',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop'
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop',
+      hasDemo: false
     }
   ];
 
-  const filteredProjects = activeFilter === 'all' ? projects : projects.filter(project => project.category === activeFilter);
+  const filteredProjects = activeFilter === 'all' ? projects : projects.filter((project: any) => project.category === activeFilter);
 
   const handleDownloadResume = () => {
     toast({
