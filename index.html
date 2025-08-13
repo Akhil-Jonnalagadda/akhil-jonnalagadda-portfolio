@@ -38,6 +38,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/ai-demo-styles.css">
 </head>
 <body class="light-mode">
     <!-- Navigation -->
@@ -549,11 +550,40 @@
             <!-- Project Filter -->
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">🧠 AI/ML</button>
                 <button class="filter-btn" data-filter="full-stack">Full Stack</button>
                 <button class="filter-btn" data-filter="backend">Backend</button>
             </div>
 
             <div class="projects-grid">
+                <!-- AI Emotion Detection Project -->
+                <div class="project-card featured-ai-project" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="AI Emotion Detection System">
+                        <div class="ai-project-badge">🧠 AI POWERED</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Emotion Detection System</h3>
+                        <p class="project-description">Real-time emotion detection using computer vision and machine learning. Features live camera feed analysis, confidence scoring, and emotion history tracking with privacy-focused local processing.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge ai-badge">React</span>
+                            <span class="tech-badge ai-badge">TypeScript</span>
+                            <span class="tech-badge ai-badge">Computer Vision</span>
+                            <span class="tech-badge ai-badge">WebRTC</span>
+                            <span class="tech-badge ai-badge">Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link demo-btn" onclick="openEmotionDemo()">
+                                <i data-lucide="play-circle"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card" data-category="full-stack">
                     <div class="project-image">
                         <img src="/projectimage/securenote.imae.webp" alt="SecureNote">
@@ -812,6 +842,56 @@
     </div>
 
  
+    <!-- AI Demo Modal -->
+    <div id="emotionDemoModal" class="demo-modal">
+        <div class="demo-content">
+            <div class="demo-header">
+                <h3 class="demo-title">🧠 AI Emotion Detection - Live Demo</h3>
+                <button class="close-demo" onclick="closeEmotionDemo()">×</button>
+            </div>
+            
+            <div class="camera-container">
+                <video id="demoVideo" autoplay playsinline muted style="display: none;"></video>
+                <div class="camera-placeholder" id="cameraPlaceholder">
+                    <p>📹 Click "Start Camera" to begin the demo</p>
+                </div>
+            </div>
+            
+            <div class="demo-controls">
+                <button id="startCameraBtn" class="demo-btn-control demo-btn-start" onclick="startDemoCamera()">
+                    📹 Start Camera
+                </button>
+                <button id="stopCameraBtn" class="demo-btn-control demo-btn-stop" onclick="stopDemoCamera()" style="display: none;">
+                    🛑 Stop Camera
+                </button>
+                <button id="startAnalysisBtn" class="demo-btn-control demo-btn-analyze" onclick="startEmotionAnalysis()">
+                    🧠 Start Analysis
+                </button>
+            </div>
+            
+            <div class="emotion-results">
+                <h4 style="margin-bottom: 16px; color: var(--text-primary);">🎯 Current Emotion:</h4>
+                <div class="current-emotion">
+                    <div class="emotion-name">No emotion detected</div>
+                </div>
+                
+                <h4 style="margin-bottom: 12px; color: var(--text-primary);">📊 Recent Emotions:</h4>
+                <div class="emotion-history"></div>
+            </div>
+            
+            <div class="demo-info">
+                <h4>🎥 Demo Features:</h4>
+                <ul>
+                    <li>Real-time emotion detection from webcam feed</li>
+                    <li>Machine learning confidence scoring</li>
+                    <li>Privacy-focused: All processing happens locally</li>
+                    <li>Emotion history tracking and visualization</li>
+                    <li>Built with React, TypeScript, and Computer Vision APIs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="/script.js"></script>
 </body>
