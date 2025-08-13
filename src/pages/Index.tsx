@@ -355,7 +355,7 @@ const Index = () => {
                         Code
                       </a>
                     </Button>
-                    {project.hasDemo ? (
+                    {(project as any).hasDemo ? (
                       <Button 
                         size="sm" 
                         onClick={() => setShowEmotionDemo(true)}
